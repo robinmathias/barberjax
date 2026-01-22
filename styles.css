@@ -1,11 +1,11 @@
+/* styles.css (täielik sisu) */
 :root{
   --bg:#ffffff;
-  --soft:#f3f7ff; /* hele-sinine */
+  --soft:#f3f7ff;
   --text:#121316;
   --muted:#5f6672;
   --line:rgba(18,19,22,.10);
 
-  /* sinine accent */
   --gold:#2b6cff;
   --gold2:#8fc5ff;
 
@@ -183,18 +183,46 @@ a{color:inherit; text-decoration:none}
   padding:16px;
   box-shadow:var(--shadow2);
 }
-.icon{
-  width:44px; height:44px;
-  border-radius:14px;
-  display:inline-flex; align-items:center; justify-content:center;
-  background:rgba(43,108,255,.10);
-  border:1px solid rgba(43,108,255,.18);
-  margin-bottom:10px;
+
+/* SERVICES (no icons) */
+.cards.services{
+  grid-template-columns: repeat(4, 1fr);
 }
-.card h3{margin:0 0 6px; font-size:16px}
-.card p{margin:0 0 10px}
-.price{color:rgba(18,19,22,.70)}
-.price b{color:var(--gold)}
+.service-card{
+  padding:18px;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.service-card:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: rgba(43,108,255,.22);
+}
+.service-top{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:6px;
+}
+.service-top h3{
+  margin:0;
+  font-size:16px;
+  letter-spacing:-.1px;
+}
+.service-price{
+  font-weight:900;
+  font-size:14px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(43,108,255,.18);
+  background: rgba(43,108,255,.08);
+  color:#123a74;
+  white-space:nowrap;
+}
+
+/* old icon/price not used */
+.icon{display:none}
+.price{display:none}
 
 /* ABOUT */
 .about{
@@ -310,7 +338,6 @@ a{color:inherit; text-decoration:none}
 }
 .crow:last-child{border-bottom:0}
 .crow b{color:var(--text)}
-
 .contact-actions{margin-top:12px}
 .contact-actions .btn{flex:1}
 
@@ -323,7 +350,7 @@ a{color:inherit; text-decoration:none}
   border-bottom-color: rgba(43,108,255,.75);
 }
 
-/* map nagu kaart */
+/* map like card */
 .map{
   background:#fff;
   border:1px solid var(--line);
