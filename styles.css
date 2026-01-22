@@ -255,15 +255,15 @@ a{color:inherit; text-decoration:none}
 }
 .g{
   width:100%;
-  aspect-ratio: 4 / 5;        /* püstisem kaart -> sobib su piltidega */
+  aspect-ratio: 4 / 3;     /* horisontaalne */
   border-radius: var(--r2);
   overflow:hidden;
   border: 1px solid var(--line);
   box-shadow: var(--shadow2);
 
   background-repeat:no-repeat;
-  background-size:cover;       /* <-- täidab alati kogu kasti */
-  background-position: 50% 20%;/* <-- tõstab pilti veidi üles (soeng jääb sisse) */
+  background-size:cover;
+  background-position:50% 30%;
 }
 .g1{background-image:url("images/g1.jpg")}
 .g2{background-image:url("images/g2.jpg")}
