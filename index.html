@@ -4,46 +4,72 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BarberJax</title>
+  <meta name="description" content="BarberJax — puhas lõikus, täpne stiil. Broneeri aeg online." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <div class="nav">
+  <!-- NAV -->
+  <header class="nav">
     <div class="container nav-inner">
-      <div class="brand">
-        <!-- kui ei taha logo, võid img ära kustutada -->
-        <img src="logo.png" alt="BarberJax logo">
+      <a class="brand" href="#top">
+        <!-- kui logo fail sul on teise nimega, muuda src -->
+        <img src="logo.png" alt="BarberJax logo" />
         <span>BarberJax</span>
+      </a>
+
+      <nav class="menu">
+        <a href="#teenused">Teenused</a>
+        <a href="#hinnad">Hinnad</a>
+        <a href="#galerii">Galerii</a>
+        <a href="#arvustused">Arvustused</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <div class="nav-right">
+        <div class="nav-meta">
+          <span class="pill">Tartu</span>
+          <span class="muted">•</span>
+          <span class="muted">E–L 10–19</span>
+        </div>
+        <a class="btn btn-primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">
+          Broneeri aeg
+        </a>
       </div>
 
-      <div class="menu">
-        <a href="index.html" data-page="1">Avaleht</a>
-        <a href="services.html" data-page="1">Teenused</a>
-        <a href="contact.html" data-page="1">Kontakt</a>
-      </div>
-
-      <div class="meta">
-        <span>Tartu</span><span class="dot">•</span><span>E–L 10–19</span>
-        <a class="btn primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri aeg</a>
-      </div>
+      <button class="burger" aria-label="Ava menüü" id="burger">☰</button>
     </div>
-  </div>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div>
-          <h1 class="h1">Puhas lõikus.<br/>Täpne stiil.</h1>
-          <p class="p">
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu">
+      <a href="#teenused">Teenused</a>
+      <a href="#hinnad">Hinnad</a>
+      <a href="#galerii">Galerii</a>
+      <a href="#arvustused">Arvustused</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn-primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">
+        Broneeri
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Puhas lõikus.<br/>Täpne stiil.</h1>
+          <p class="lead">
             BarberJax — meeste lõikused, fade ja viimistlus.
-            Broneeri online ja ongi aeg kirjas.
+            Broneeri aeg online ja tule kohale.
           </p>
-          <div class="row">
-            <a class="btn primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri aeg</a>
-            <a class="btn dark" href="#galerii">Vaata töid</a>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri aeg</a>
+            <a class="btn btn-ghost" href="#galerii">Vaata töid</a>
           </div>
 
-          <div class="rating">
+          <div class="trust">
             <span class="star">★</span>
             <span>4.9/5 (Google)</span>
             <span class="dot">•</span>
@@ -54,131 +80,204 @@
         </div>
 
         <div class="hero-card">
-          <div class="small"><b>Kiire info</b></div>
-          <div class="small" style="margin-top:10px">
-            • Broneerimine: Calendly<br/>
-            • Asukoht: (pane kontaktilehel päris aadress)<br/>
-            • Maksmine: sularaha / kaart (muuda kui vaja)
+          <div class="hc-title">Kiire info</div>
+          <div class="hc-list">
+            <div><b>Kestus:</b> 45 min</div>
+            <div><b>Broneerimine:</b> Calendly</div>
+            <div><b>Asukoht:</b> (pane aadress all)</div>
           </div>
-          <div class="row" style="margin-top:12px">
-            <a class="btn primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri</a>
-            <a class="btn" href="contact.html">Kontakt</a>
+          <a class="btn btn-primary w100" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri kohe</a>
+          <div class="hint">*Asenda tekstid päris infoga.</div>
+        </div>
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="teenused">
+      <div class="container">
+        <div class="section-head">
+          <h2>Teenused</h2>
+          <p class="muted">Kiire, puhas ja detailne töö. Vali teenus ja broneeri.</p>
+        </div>
+
+        <div class="cards4">
+          <div class="card">
+            <div class="icon">✂️</div>
+            <h3>Lõikus</h3>
+            <p class="muted">Klassikaline lõikus + viimistlus.</p>
+            <div class="price">Alates <span>€—</span></div>
+          </div>
+
+          <div class="card">
+            <div class="icon">🪒</div>
+            <h3>Fade</h3>
+            <p class="muted">Skin fade / taper / clean lines.</p>
+            <div class="price">Alates <span>€—</span></div>
+          </div>
+
+          <div class="card">
+            <div class="icon">🧔</div>
+            <h3>Habeme trim</h3>
+            <p class="muted">Kuju + kontuurid + viimistlus.</p>
+            <div class="price">Alates <span>€—</span></div>
+          </div>
+
+          <div class="card">
+            <div class="icon">💨</div>
+            <h3>Stiil</h3>
+            <p class="muted">Styling / viimistlus / soovitused.</p>
+            <div class="price">Alates <span>€—</span></div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- TEENUSED -->
-  <section class="section">
-    <div class="container">
-      <div class="grid4">
-        <div class="service">
-          <div class="icon">✂️</div>
-          <h3>Lõikus</h3>
-          <p>Puhtad jooned, kiire tulemus.</p>
-          <div class="from">Alates <span>€—</span></div>
-        </div>
-        <div class="service">
-          <div class="icon">🪒</div>
-          <h3>Fade</h3>
-          <p>Skin fade / taper / clean.</p>
-          <div class="from">Alates <span>€—</span></div>
-        </div>
-        <div class="service">
-          <div class="icon">🧔</div>
-          <h3>Habeme trim</h3>
-          <p>Kuju + viimistlus.</p>
-          <div class="from">Alates <span>€—</span></div>
-        </div>
-        <div class="service">
-          <div class="icon">💨</div>
-          <h3>Stiil</h3>
-          <p>Viimistlus / styling.</p>
-          <div class="from">Alates <span>€—</span></div>
+        <div class="center-row">
+          <a class="btn btn-primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri & vaata hinnakirja</a>
         </div>
       </div>
+    </section>
 
-      <div class="row" style="margin-top:14px">
-        <a class="btn primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Vaata hinnakirja & broneeri</a>
-        <a class="btn" href="services.html">Kõik teenused</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MIKS VALIDA -->
-  <section class="section">
-    <div class="container">
-      <div class="two-col">
-        <div class="card">
-          <h2 class="section-title">Miks valida mind?</h2>
-          <ul class="list">
+    <!-- WHY + ABOUT IMAGE -->
+    <section class="section soft">
+      <div class="container two-col">
+        <div>
+          <h2>Miks valida mind?</h2>
+          <p class="muted">Lihtne protsess, puhas töö ja kindel tulemus.</p>
+          <ul class="check">
             <li>Personaalne konsultatsioon enne lõikust</li>
             <li>Puhas töö — detailid loevad</li>
             <li>Aegadega täpne ja rahulik teenindus</li>
-            <li>Soovitan tooteid vastavalt juuksetüübile</li>
+            <li>Soovitused toodetele ja stiilile</li>
           </ul>
+          <div class="mini-cta">
+            <a class="btn btn-ghost" href="#kontakt">Küsi küsimus</a>
+            <a class="btn btn-primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri</a>
+          </div>
         </div>
-        <div class="img about" title="pane siia about.jpg"></div>
-      </div>
-    </div>
-  </section>
 
-  <!-- GALERII -->
-  <section class="section" id="galerii">
-    <div class="container">
-      <h2 class="section-title" style="text-align:center">Galerii</h2>
-      <div class="gallery">
-        <div class="g g1"></div>
-        <div class="g g2"></div>
-        <div class="g g3"></div>
-        <div class="g g4"></div>
-        <div class="g g5"></div>
+        <div class="about-img" aria-label="About photo"></div>
       </div>
-      <div class="row" style="margin-top:14px; justify-content:center">
-        <a class="btn" href="services.html">Vaata kogu galeriid →</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ARVUSTUSED -->
-  <section class="section">
-    <div class="container">
-      <div class="grid3">
-        <div class="quote">
-          <b>“Parim lõikus. Täpselt see, mida tahtsin.”</b>
-          <div class="who">— K</div>
+    <!-- PRICES -->
+    <section class="section" id="hinnad">
+      <div class="container">
+        <div class="section-head">
+          <h2>Hinnad</h2>
+          <p class="muted">Kui sul on hinnakiri Calendly’s, võid need siia hiljem kopeerida.</p>
         </div>
-        <div class="quote">
-          <b>“Väga professionaalne ja sõbralik teenindus!”</b>
-          <div class="who">— Laura</div>
+
+        <div class="price-box">
+          <div class="price-row"><span>Meeste lõikus</span><b>€—</b></div>
+          <div class="price-row"><span>Fade / skin fade</span><b>€—</b></div>
+          <div class="price-row"><span>Habeme trim</span><b>€—</b></div>
+          <div class="price-row"><span>Masinalõikus</span><b>€—</b></div>
+          <div class="price-row"><span>Stiil / viimistlus</span><b>€—</b></div>
         </div>
-        <div class="quote">
-          <b>“Super tulemused. Soovitan kindlasti.”</b>
-          <div class="who">— Mark</div>
+
+        <div class="center-row">
+          <a class="btn btn-primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri online</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container">
-      <h2>Broneeri aeg 30 sekundiga</h2>
-      <p>Vali aeg online ja tule kohale. Lihtne.</p>
-      <div class="row">
-        <a class="btn primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri online</a>
-        <a class="btn dark" href="contact.html">Kirjuta / kontakt</a>
+    <!-- GALLERY -->
+    <section class="section" id="galerii">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Galerii</h2>
+          <p class="muted">Pane siia oma tööde pildid (enne/pärast või stiilinäited).</p>
+        </div>
+
+        <div class="gallery">
+          <div class="g g1"></div>
+          <div class="g g2"></div>
+          <div class="g g3"></div>
+          <div class="g g4"></div>
+          <div class="g g5"></div>
+          <div class="g g6"></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="footer">
-    <div class="container footer-row">
-      <div>© <span data-year></span> BarberJax</div>
-      <div class="small">Avaleht • Teenused • Kontakt</div>
-    </div>
-  </div>
+    <!-- REVIEWS -->
+    <section class="section soft" id="arvustused">
+      <div class="container">
+        <div class="section-head">
+          <h2>Arvustused</h2>
+          <p class="muted">Lisa päris tagasiside (Google / IG DM). Praegu näited.</p>
+        </div>
+
+        <div class="reviews">
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>“Parim lõikus. Täpselt see, mida tahtsin.”</p>
+            <div class="who">— K</div>
+          </div>
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>“Väga professionaalne ja sõbralik teenindus!”</p>
+            <div class="who">— Laura</div>
+          </div>
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>“Super tulemused. Soovitan kindlasti.”</p>
+            <div class="who">— Mark</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="cta-strip">
+      <div class="container cta-inner">
+        <div>
+          <h2>Broneeri aeg 30 sekundiga</h2>
+          <p class="muted">Vali sobiv aeg online ja ongi olemas.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri online</a>
+          <a class="btn btn-ghost" href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="kontakt">
+      <div class="container contact">
+        <div>
+          <h2>Kontakt</h2>
+          <div class="contact-card">
+            <div class="crow"><span>📍 Aadress</span><b>Pane siia päris aadress</b></div>
+            <div class="crow"><span>📞 Telefon</span><b>+372 …</b></div>
+            <div class="crow"><span>📷 Instagram</span><b>@barberjax</b></div>
+            <div class="crow"><span>🕒 Lahtiolekuajad</span><b>E–L 10–19</b></div>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="https://calendly.com/jakob-puu/45min" target="_blank" rel="noreferrer">Broneeri</a>
+              <a class="btn btn-ghost" href="#top">Tagasi üles</a>
+            </div>
+          </div>
+
+          <div class="note">
+            Kui tahad, lisan siia ka Google Maps embed’i (vaja ainult aadressi).
+          </div>
+        </div>
+
+        <div class="map">
+          <div class="map-placeholder">
+            Google Maps siia (valikuline)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© <span data-year></span> BarberJax</div>
+        <div class="muted">Puhas lõikus • Täpne stiil</div>
+      </div>
+    </footer>
+  </main>
 
   <script src="app.js"></script>
 </body>
