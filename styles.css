@@ -254,8 +254,9 @@ a{color:inherit; text-decoration:none}
   gap:18px;
 }
 .g{
+  display:block;                 /* oluline kui .g on <a> */
   width:100%;
-  aspect-ratio: 2 / 3;     /* horisontaalne */
+  height: clamp(320px, 28vw, 520px);  /* TÕSTAB kõrgust kindlalt */
   border-radius: var(--r2);
   overflow:hidden;
   border: 1px solid var(--line);
@@ -263,7 +264,7 @@ a{color:inherit; text-decoration:none}
 
   background-repeat:no-repeat;
   background-size:cover;
-  background-position:50% 30%;
+  background-position:50% 20%;
 }
 .g1{background-image:url("images/g1.jpg")}
 .g2{background-image:url("images/g2.jpg")}
