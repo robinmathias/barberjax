@@ -249,22 +249,21 @@ a{color:inherit; text-decoration:none}
 
 /* GALLERY */
 .gallery{
-  display: grid;
+  display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 10px 0;
+  gap:18px;
 }
 .g{
-  width: 100%;
-  aspect-ratio: 3 / 4; /* muudab kastid püstisteks – ideaalne barber piltidele */
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: var(--shadow2);
+  width:100%;
+  aspect-ratio: 4 / 5;        /* püstisem kaart -> sobib su piltidega */
+  border-radius: var(--r2);
+  overflow:hidden;
   border: 1px solid var(--line);
+  box-shadow: var(--shadow2);
 
-  background-position: center;
-  background-size: cover;   /* pilt täidab kasti */
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
+  background-size:cover;       /* <-- täidab alati kogu kasti */
+  background-position: 50% 20%;/* <-- tõstab pilti veidi üles (soeng jääb sisse) */
 }
 .g1{background-image:url("images/g1.jpg")}
 .g2{background-image:url("images/g2.jpg")}
