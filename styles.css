@@ -20,7 +20,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background:var(--bg);
   color:var(--text);
 }
@@ -30,6 +30,9 @@ a{color:inherit; text-decoration:none}
 .center{text-align:center}
 .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
 .w100{width:100%}
+
+/* optional: natuke “premium” tihedam pealkiri */
+h1,h2,h3{letter-spacing:-0.3px}
 
 /* NAV */
 .nav{
@@ -225,20 +228,18 @@ a{color:inherit; text-decoration:none}
   margin-top: 10px; /* muuda 6px–14px */
 }
 
-/* ✅ MUUTUS 2: TEENUSED sektsiooni tumedam sinine taust + tekst jääb mustaks */
+/* ✅ MUUTUS 2: TEENUSED sektsiooni tumedam sinine taust + tekst must */
 #teenused{
-  /* tumedam toon, aga ikka “soft” */
   background: linear-gradient(180deg, rgba(0,120,220,.28), rgba(0,120,220,.14));
   border-top: 1px solid rgba(0,120,220,.22);
   border-bottom: 1px solid rgba(0,120,220,.22);
 }
-
-/* hoia pealkiri/tekst must (default), aga tee “muted” natuke tumedamaks et loetav oleks */
+#teenused, #teenused h2, #teenused h3, #teenused p{
+  color:#121316;
+}
 #teenused .muted{
   color: rgba(18,19,22,.72);
 }
-
-/* kaardid natuke “klaas” look, et sinisel parem */
 #teenused .card{
   background: rgba(255,255,255,.92);
 }
