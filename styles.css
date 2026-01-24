@@ -225,17 +225,20 @@ a{color:inherit; text-decoration:none}
   margin-top: 10px; /* muuda 6px–14px */
 }
 
-/* ✅ MUUTUS 2: TEENUSED sektsiooni sinine taust (toon #0096FF) */
+/* ✅ MUUTUS 2: TEENUSED sektsiooni tumedam sinine taust + tekst jääb mustaks */
 #teenused{
-  background: linear-gradient(180deg, rgba(0,150,255,.18), rgba(0,150,255,.08));
-  border-top: 1px solid rgba(0,150,255,.22);
-  border-bottom: 1px solid rgba(0,150,255,.22);
+  /* tumedam toon, aga ikka “soft” */
+  background: linear-gradient(180deg, rgba(0,120,220,.28), rgba(0,120,220,.14));
+  border-top: 1px solid rgba(0,120,220,.22);
+  border-bottom: 1px solid rgba(0,120,220,.22);
 }
-#teenused .section-head h2{ color:#fff; }
-#teenused .section-head .muted{ color: rgba(255,255,255,.88); }
 
-/* Kui tahad, et kaardid sobiks sinise taustaga veel paremini (optional, aga ilus):
-   - tee kaardid kergelt "klaasiks" */
+/* hoia pealkiri/tekst must (default), aga tee “muted” natuke tumedamaks et loetav oleks */
+#teenused .muted{
+  color: rgba(18,19,22,.72);
+}
+
+/* kaardid natuke “klaas” look, et sinisel parem */
 #teenused .card{
   background: rgba(255,255,255,.92);
 }
