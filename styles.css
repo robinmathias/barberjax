@@ -222,7 +222,7 @@ a{color:inherit; text-decoration:none}
 
 /* ✅ MUUTUS: teenuste all “Broneeri online” nupp natuke allapoole */
 #teenused .center{
-  margin-top: 10px; /* muuda 6px–14px, kui tahad */
+  margin-top: 14px; /* muuda 6px–14px, kui tahad */
 }
 
 /* old icon/price not used */
