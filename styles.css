@@ -223,14 +223,14 @@ h1,h2,h3{letter-spacing:-0.3px}
   white-space:nowrap;
 }
 
-/* ✅ MUUTUS 1: teenuste all “Broneeri online” nupp natuke allapoole */
+/* ✅ TEENUSED: nupp natuke allapoole */
 #teenused .center{
-  margin-top: 10px; /* muuda 6px–14px */
+  margin-top: 10px;
 }
 
-/* ✅ MUUTUS 2: TEENUSED sektsiooni ühtlane sinine taust + tekst must (sinine jääb samaks) */
+/* ✅ TEENUSED: ühtlane sinine taust (jääb samaks) + must tekst */
 #teenused{
-  background: #3d95e3; /* sinu valitud sinine */
+  background: #3d95e3;
   border-top: 1px solid rgba(0,0,0,.08);
   border-bottom: 1px solid rgba(0,0,0,.08);
 }
@@ -238,54 +238,39 @@ h1,h2,h3{letter-spacing:-0.3px}
   color:#121316;
 }
 #teenused .muted{
-  color: rgba(18,19,22,.80);
+  color: rgba(15,23,42,.78);
 }
 #teenused .card{
   background: rgba(255,255,255,.92);
 }
 
-/* ✅ MUUTUS 3: TEENUSED “Broneeri online” nupp valgeks + tekst paremini nähtav */
+/* ✅ TEENUSED: “Broneeri online” nupp valge + parem kontrast */
 #teenused .center .btn{
   background:#fff;
   color:#0f172a;
   font-weight:800;
-  border:1px solid rgba(15,23,42,.18);
+  border: 2px solid rgba(43,108,255,.35);
+  border-radius: 999px;
+  padding: 12px 22px;
   box-shadow: 0 10px 22px rgba(0,0,0,.10);
-  padding:12px 18px;
-}
-#teenused .center .btn.btn-primary{
-  border-color: rgba(43,108,255,.45);
 }
 #teenused .center .btn:hover{
   transform: translateY(-1px);
   box-shadow: 0 14px 28px rgba(0,0,0,.14);
 }
 
-/* ✅ Parandused (2–6) TEENUSED sektsioonis, sinist ei muuda */
-#teenused .section-head h2{ color:#0f172a; }
-#teenused .section-head .muted{ color: rgba(15,23,42,.78); }
-
+/* ✅ FIX: TEENUSED kastid tagasi “nagu enne” (ei flex'i, ei min-height'i) */
 #teenused .service-card{
-  min-height: 150px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
+  min-height: unset;
+  display: block;
 }
 #teenused .card{
-  border-color: rgba(15,23,42,.10);
+  border-color: var(--line);
 }
 #teenused .service-card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 18px 40px rgba(0,0,0,.12);
-  border-color: rgba(43,108,255,.28);
-}
-#teenused .center .btn{
-  border: 2px solid rgba(43,108,255,.35);
-  border-radius: 999px;
-  padding: 12px 22px;
-}
-#teenused.section{
-  padding: 56px 0;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: rgba(43,108,255,.22);
 }
 
 /* old icon/price not used */
