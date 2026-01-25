@@ -228,9 +228,9 @@ h1,h2,h3{letter-spacing:-0.3px}
   margin-top: 10px; /* muuda 6px–14px */
 }
 
-/* ✅ MUUTUS 2: TEENUSED sektsiooni tumedam sinine taust + tekst must */
+/* ✅ MUUTUS 2: TEENUSED sektsiooni ühtlane sinine taust + tekst must */
 #teenused{
-  background: #63b7fc; /* tumedam ühtlane sinine */
+  background: #3d95e3; /* solid sinine (heledam kui #2a86d6) */
   border-top: 1px solid rgba(0,0,0,.08);
   border-bottom: 1px solid rgba(0,0,0,.08);
 }
@@ -238,10 +238,27 @@ h1,h2,h3{letter-spacing:-0.3px}
   color:#121316;
 }
 #teenused .muted{
-  color: rgba(18,19,22,.72);
+  color: rgba(18,19,22,.80);
 }
 #teenused .card{
   background: rgba(255,255,255,.92);
+}
+
+/* ✅ MUUTUS 3: TEENUSED “Broneeri online” nupp valgeks + tekst paremini nähtav */
+#teenused .center .btn{
+  background:#fff;
+  color:#0f172a;
+  font-weight:800;
+  border:1px solid rgba(15,23,42,.18);
+  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+  padding:12px 18px; /* natuke suurem */
+}
+#teenused .center .btn.btn-primary{
+  border-color: rgba(43,108,255,.45);
+}
+#teenused .center .btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.14);
 }
 
 /* old icon/price not used */
