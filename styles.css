@@ -230,9 +230,9 @@ h1,h2,h3{letter-spacing:-0.3px}
 
 /* ✅ MUUTUS 2: TEENUSED sektsiooni tumedam sinine taust + tekst must */
 #teenused{
-  background: rgba(0,120,220,.22); /* ühtlane sinine */
-  border-top: 1px solid rgba(0,120,220,.22);
-  border-bottom: 1px solid rgba(0,120,220,.22);
+  background: #2a86d6; /* tumedam ühtlane sinine */
+  border-top: 1px solid rgba(0,0,0,.08);
+  border-bottom: 1px solid rgba(0,0,0,.08);
 }
 #teenused, #teenused h2, #teenused h3, #teenused p{
   color:#121316;
