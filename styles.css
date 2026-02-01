@@ -231,27 +231,19 @@ h1,h2,h3{letter-spacing:-0.3px}
 }
 
 /* ✅ TEENUSED: nupp natuke allapoole */
-#teenused .center{
-  margin-top: 10px;
-}
+#teenused .center{ margin-top: 10px; }
 
-/* ✅ TEENUSED: ühtlane sinine taust (jääb samaks) + must tekst */
+/* ✅ TEENUSED: ühtlane sinine taust + must tekst */
 #teenused{
   background: #83c9ff;
   border-top: 1px solid rgba(0,0,0,.08);
   border-bottom: 1px solid rgba(0,0,0,.08);
 }
-#teenused, #teenused h2, #teenused h3, #teenused p{
-  color:#121316;
-}
-#teenused .muted{
-  color: rgba(15,23,42,.78);
-}
-#teenused .card{
-  background: rgba(255,255,255,.92);
-}
+#teenused, #teenused h2, #teenused h3, #teenused p{ color:#121316; }
+#teenused .muted{ color: rgba(15,23,42,.78); }
+#teenused .card{ background: rgba(255,255,255,.92); }
 
-/* ✅ TEENUSED: “Broneeri online” nupp valge + parem kontrast */
+/* ✅ TEENUSED: “Broneeri online” nupp valge */
 #teenused .center .btn{
   background:#fff;
   color:#0f172a;
@@ -267,13 +259,8 @@ h1,h2,h3{letter-spacing:-0.3px}
 }
 
 /* ✅ FIX: TEENUSED kastid tagasi “nagu enne” */
-#teenused .service-card{
-  min-height: unset;
-  display: block;
-}
-#teenused .card{
-  border-color: var(--line);
-}
+#teenused .service-card{ min-height: unset; display: block; }
+#teenused .card{ border-color: var(--line); }
 #teenused .service-card:hover{
   transform: translateY(-2px);
   box-shadow: var(--shadow);
@@ -284,11 +271,11 @@ h1,h2,h3{letter-spacing:-0.3px}
 .icon{display:none}
 .price{display:none}
 
-/* ABOUT (tekst kõrval + püstipilt paremal) */
+/* ABOUT (tekst vasakul + väike püstipilt paremal) */
 .about{
   display:grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap:18px;
+  grid-template-columns: 1.12fr .88fr;
+  gap:22px;
   align-items:center;
 }
 .check{
@@ -298,36 +285,44 @@ h1,h2,h3{letter-spacing:-0.3px}
   line-height:1.9;
 }
 
-/* kui sa EI kasuta enam about.jpg placeholderit, võid selle üldse kustutada */
-.about-img{
-  border-radius:var(--r2);
-  border:1px solid var(--line);
-  background: url("images/about.jpg") center/cover no-repeat;
-  box-shadow:var(--shadow);
-  min-height:280px;
-}
-
-/* uus parem pool story pilt */
 .about-media{
   display:flex;
   justify-content:flex-end;
 }
+
+/* ✅ väiksem “story” pilt */
 .story-media{
-  width:min(420px, 100%);
+  width:100%;
+  max-width:260px;       /* <-- suurus: proovi 220–300 */
   aspect-ratio: 9 / 16;
   border-radius: var(--r2);
   overflow:hidden;
-  border: 1px solid var(--line);
+  border:1px solid var(--line);
   box-shadow: var(--shadow2);
   background:#000;
   margin:0;
 }
+
+/* “lagi” kõrgusele desktopis */
+@media (min-width: 981px){
+  .story-media{ max-height:380px; }
+}
+
 .story-media img{
   width:100%;
   height:100%;
   display:block;
   object-fit:cover;
   object-position: 70% 50%;
+}
+
+/* (valikuline) vana about.jpg placeholder — kui enam ei kasuta, võid kustutada */
+.about-img{
+  border-radius:var(--r2);
+  border:1px solid var(--line);
+  background: url("images/about.jpg") center/cover no-repeat;
+  box-shadow:var(--shadow);
+  min-height:280px;
 }
 
 /* PRICES + RULES */
