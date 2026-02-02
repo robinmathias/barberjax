@@ -109,9 +109,7 @@ h1,h2,h3{letter-spacing:-0.3px}
 }
 .hero-bg{
   position:absolute; inset:0;
-  background:
-    linear-gradient(90deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.72) 45%, rgba(255,255,255,.30) 70%, rgba(255,255,255,.10) 100%),
-    url("images/hero-bg.png") center/cover no-repeat;
+  background: url("images/hero-bg.png") center/cover no-repeat;
 }
 .hero-inner{
   position:relative; z-index:2;
