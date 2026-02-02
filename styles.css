@@ -291,7 +291,7 @@ h1,h2,h3{letter-spacing:-0.3px}
 /* ✅ väiksem “story” pilt */
 .story-media{
   width:100%;
-  max-width:260px;       /* <-- suurus: proovi 220–300 */
+  max-width:320px;       /* <-- suurus: proovi 220–300 */
   aspect-ratio: 9 / 16;
   border-radius: var(--r2);
   overflow:hidden;
