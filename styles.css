@@ -303,6 +303,23 @@ h1,h2,h3{letter-spacing:-0.3px}
   margin:0;
 }
 
+/* ABOUT tekst natuke suurem ja loetavam */
+#about h2{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+#about p.muted{
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 62ch;
+}
+
+#about .check{
+  font-size: 15.5px;
+  line-height: 1.9;
+}
+
 /* “lagi” kõrgusele desktopis */
 @media (min-width: 981px){
   .story-media{ max-height:380px; }
