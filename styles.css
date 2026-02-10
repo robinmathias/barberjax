@@ -308,9 +308,10 @@ h1,h2,h3{letter-spacing:-0.3px}
 }
 
 #about p.muted{
-  font-size: 16px;
-  line-height: 1.75;
-  max-width: 62ch;
+  font-size: 18px;
+  line-height: 1.85;
+  max-width: 70ch;
+  color: rgba(18,19,22,.90);
 }
 
 #about .check{
