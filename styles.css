@@ -1,4 +1,3 @@
-/* styles.css (täielik sisu) */
 :root{
   --bg:#ffffff;
   --soft:#f3f7ff;
@@ -50,7 +49,6 @@ h1,h2,h3{letter-spacing:-0.3px}
   width:62px;
   height:62px;
   object-fit:contain;
-
   border:0;
   padding:0;
   background:transparent;
@@ -112,20 +110,19 @@ h1,h2,h3{letter-spacing:-0.3px}
   background: url("images/hero-bg.png") center/cover no-repeat;
 }
 .hero-inner{
-  position:relative; z-index:2;
-  padding:64px 0 54px;
-  display:grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap:18px;
-  align-items:end;
+  position:relative;
+  z-index:2;
+  padding:72px 0 64px;
+  display:block;
 }
 .hero-left{
-  background: rgba(255,255,255,.78);
+  max-width:700px;
+  background: rgba(255,255,255,.82);
   border: 1px solid rgba(18,19,22,.10);
   border-radius: var(--r2);
-  padding: 18px 18px 16px;
-  box-shadow: var(--shadow2);
-  backdrop-filter: blur(8px);
+  padding: 26px 26px 22px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
 }
 .kicker{
   display:inline-flex;
@@ -161,17 +158,32 @@ h1,h2,h3{letter-spacing:-0.3px}
 .star{color:var(--gold)}
 .dot{opacity:.5}
 
-.info-card{
-  background:rgba(255,255,255,.92);
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  padding:16px;
-  box-shadow:var(--shadow);
+.hero-info{
+  margin-top:18px;
+  padding-top:16px;
+  border-top:1px solid rgba(18,19,22,.10);
+  display:grid;
+  gap:10px;
 }
-.ic-title{font-weight:900; margin-bottom:10px}
-.ic-list{display:grid; gap:10px; margin-bottom:12px}
-.ic-list div{display:flex; justify-content:space-between; gap:10px; color:rgba(18,19,22,.75)}
-.ic-list span{color:rgba(18,19,22,.55)}
+.hero-info-row{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  color:rgba(18,19,22,.78);
+}
+.hero-info-row span{
+  color:rgba(18,19,22,.55);
+}
+.hero-info-row b{
+  color:var(--text);
+  text-align:right;
+}
+.hero-actions{
+  margin-top:18px;
+}
+.hero-hint{
+  margin-top:12px;
+}
 .hint{font-size:12px; color:rgba(18,19,22,.55)}
 
 /* SECTIONS */
@@ -236,10 +248,10 @@ h1,h2,h3{letter-spacing:-0.3px}
   white-space:nowrap;
 }
 
-/* ✅ TEENUSED: nupp natuke allapoole */
+/* TEENUSED: nupp natuke allapoole */
 #teenused .center{ margin-top: 10px; }
 
-/* ✅ TEENUSED: ühtlane sinine taust + must tekst */
+/* TEENUSED: ühtlane sinine taust + must tekst */
 #teenused{
   background: #83c9ff;
   border-top: 1px solid rgba(0,0,0,.08);
@@ -249,7 +261,7 @@ h1,h2,h3{letter-spacing:-0.3px}
 #teenused .muted{ color: rgba(15,23,42,.78); }
 #teenused .card{ background: rgba(255,255,255,.92); }
 
-/* ✅ TEENUSED: “Broneeri online” nupp valge */
+/* TEENUSED: “Broneeri online” nupp valge */
 #teenused .center .btn{
   background:#fff;
   color:#0f172a;
@@ -264,7 +276,7 @@ h1,h2,h3{letter-spacing:-0.3px}
   box-shadow: 0 14px 28px rgba(0,0,0,.14);
 }
 
-/* ✅ FIX: TEENUSED kastid tagasi “nagu enne” */
+/* FIX: TEENUSED kastid tagasi “nagu enne” */
 #teenused .service-card{ min-height: unset; display: block; }
 #teenused .card{ border-color: var(--line); }
 #teenused .service-card:hover{
@@ -296,10 +308,10 @@ h1,h2,h3{letter-spacing:-0.3px}
   justify-content:flex-end;
 }
 
-/* ✅ väiksem “story” pilt */
+/* väiksem “story” pilt */
 .story-media{
   width:100%;
-  max-width:320px;       /* <-- suurus: proovi 220–300 */
+  max-width:320px;
   aspect-ratio: 9 / 16;
   border-radius: var(--r2);
   overflow:hidden;
@@ -340,7 +352,7 @@ h1,h2,h3{letter-spacing:-0.3px}
   object-position: 70% 50%;
 }
 
-/* (valikuline) vana about.jpg placeholder — kui enam ei kasuta, võid kustutada */
+/* vana about.jpg placeholder */
 .about-img{
   border-radius:var(--r2);
   border:1px solid var(--line);
@@ -394,7 +406,6 @@ h1,h2,h3{letter-spacing:-0.3px}
   overflow:hidden;
   border: 1px solid var(--line);
   box-shadow: var(--shadow2);
-
   background-repeat:no-repeat;
   background-size:cover;
   background-position:50% 20%;
@@ -484,7 +495,6 @@ h1,h2,h3{letter-spacing:-0.3px}
 @media (max-width: 980px){
   .menu{display:none}
   .burger{display:inline-flex}
-  .hero-inner{grid-template-columns:1fr}
   .cards{grid-template-columns:repeat(2,1fr)}
   .about{grid-template-columns:1fr}
   .about-media{justify-content:center}
@@ -493,14 +503,8 @@ h1,h2,h3{letter-spacing:-0.3px}
   .contact{grid-template-columns:1fr}
   .hero h1{font-size:44px}
 }
-@media (max-width: 520px){
-  .cards{grid-template-columns:1fr}
-  .hero h1{font-size:38px}
-}
 
-/* ✅ MOBILE POLISH (telefonis ilusam) */
 @media (max-width: 760px){
-
   .nav-inner{padding:10px 0}
   .brand img{width:34px; height:34px}
   .brand span{font-size:16px}
@@ -510,6 +514,9 @@ h1,h2,h3{letter-spacing:-0.3px}
     gap:14px;
     align-items:stretch;
   }
+  .hero-left{
+    padding:20px 18px 18px;
+  }
   .hero h1{
     font-size:36px;
     line-height:1.06;
@@ -518,17 +525,21 @@ h1,h2,h3{letter-spacing:-0.3px}
   .lead{font-size:15px}
   .meta{font-size:13px}
 
-  .hero-left .row{
-    flex-direction:column;
-    align-items:stretch;
-  }
-  .hero-left .row .btn{width:100%}
-
-  .info-card{padding:14px}
-  .ic-list div{
+  .hero-info-row{
     flex-direction:column;
     align-items:flex-start;
     gap:4px;
+  }
+  .hero-info-row b{
+    text-align:left;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .hero-actions .btn{
+    width:100%;
   }
 
   .cards.services{
@@ -574,10 +585,15 @@ h1,h2,h3{letter-spacing:-0.3px}
     align-items:flex-start;
     gap:4px;
   }
-  .crow b, .ic-list b{
+  .crow b{
     word-break:break-word;
   }
   .map iframe{min-height:260px}
+}
+
+@media (max-width: 520px){
+  .cards{grid-template-columns:1fr}
+  .hero h1{font-size:38px}
 }
 
 /* extra: kõige väiksemad telefonid */
