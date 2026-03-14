@@ -507,11 +507,11 @@ h1,h2,h3{letter-spacing:-0.3px}
 
 @media (max-width: 760px){
   .container{
-    padding: 0 14px;
+    padding: 0 18px;
   }
 
   .section{
-    padding: 34px 0;
+    padding: 36px 0;
   }
 
   .nav-inner{
@@ -536,18 +536,18 @@ h1,h2,h3{letter-spacing:-0.3px}
   }
 
   .mobile{
-    padding:10px 14px 14px;
+    padding:10px 16px 14px;
   }
 
   .hero-inner{
-    padding:32px 0 24px;
+    padding:36px 0 26px;
     align-items:stretch;
   }
 
   .hero-left{
     max-width:100%;
-    padding:18px 16px 16px;
-    border-radius:18px;
+    padding:20px 18px 18px;
+    border-radius:20px;
   }
 
   .kicker{
@@ -564,7 +564,7 @@ h1,h2,h3{letter-spacing:-0.3px}
 
   .lead{
     font-size:14px;
-    line-height:1.6;
+    line-height:1.65;
     margin:0 0 14px;
   }
 
@@ -629,7 +629,7 @@ h1,h2,h3{letter-spacing:-0.3px}
   }
 
   .cards.services{
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
     gap:12px;
   }
 
@@ -713,12 +713,12 @@ h1,h2,h3{letter-spacing:-0.3px}
   }
 
   .gallery{
-    grid-template-columns:1fr;
-    gap:12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px;
   }
 
   .g{
-    height: clamp(220px, 62vw, 320px);
+    height: clamp(180px, 42vw, 260px);
     background-position:center;
   }
 
@@ -805,7 +805,7 @@ h1,h2,h3{letter-spacing:-0.3px}
   }
 
   .hero-left{
-    padding:16px 14px 14px;
+    padding:18px 16px 16px;
   }
 
   .lead{
@@ -824,12 +824,20 @@ h1,h2,h3{letter-spacing:-0.3px}
   .service-price{
     align-self:flex-start;
   }
+
+  .gallery{
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px;
+  }
+
+  .g{
+    height: 170px;
+  }
 }
 
-/* extra: kõige väiksemad telefonid */
 @media (max-width: 420px){
   .container{
-    padding:0 12px;
+    padding:0 16px;
   }
 
   .hero h1{
@@ -847,6 +855,14 @@ h1,h2,h3{letter-spacing:-0.3px}
 
   .section{
     padding:30px 0;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .g{
+    height:240px;
   }
 
   .map iframe{
