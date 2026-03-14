@@ -506,99 +506,350 @@ h1,h2,h3{letter-spacing:-0.3px}
 }
 
 @media (max-width: 760px){
-  .nav-inner{padding:10px 0}
-  .brand img{width:34px; height:34px}
-  .brand span{font-size:16px}
+  .container{
+    padding: 0 14px;
+  }
+
+  .section{
+    padding: 34px 0;
+  }
+
+  .nav-inner{
+    padding:10px 0;
+  }
+
+  .brand{
+    gap:8px;
+  }
+
+  .brand img{
+    width:34px;
+    height:34px;
+  }
+
+  .brand span{
+    font-size:15px;
+  }
+
+  .burger{
+    padding:8px 10px;
+  }
+
+  .mobile{
+    padding:10px 14px 14px;
+  }
 
   .hero-inner{
-    padding:44px 0 32px;
-    gap:14px;
+    padding:32px 0 24px;
     align-items:stretch;
   }
+
   .hero-left{
-    padding:20px 18px 18px;
+    max-width:100%;
+    padding:18px 16px 16px;
+    border-radius:18px;
   }
+
+  .kicker{
+    font-size:11px;
+    letter-spacing:.7px;
+    margin-bottom:8px;
+  }
+
   .hero h1{
-    font-size:36px;
-    line-height:1.06;
-    margin-bottom:10px;
+    font-size:32px;
+    line-height:1.08;
+    margin:0 0 10px;
   }
-  .lead{font-size:15px}
-  .meta{font-size:13px}
+
+  .lead{
+    font-size:14px;
+    line-height:1.6;
+    margin:0 0 14px;
+  }
+
+  .meta{
+    font-size:12.5px;
+    gap:8px;
+    margin-top:10px;
+  }
+
+  .hero-info{
+    margin-top:14px;
+    padding-top:14px;
+    gap:8px;
+  }
 
   .hero-info-row{
     flex-direction:column;
     align-items:flex-start;
-    gap:4px;
+    gap:3px;
   }
+
+  .hero-info-row span{
+    font-size:13px;
+  }
+
   .hero-info-row b{
     text-align:left;
+    font-size:14px;
   }
 
   .hero-actions{
+    margin-top:14px;
+  }
+
+  .hero-actions .row{
     flex-direction:column;
     align-items:stretch;
+    width:100%;
+    gap:10px;
   }
+
   .hero-actions .btn{
     width:100%;
   }
 
+  .hero-hint{
+    margin-top:10px;
+  }
+
+  .section-head{
+    margin-bottom:14px;
+  }
+
+  .section-head h2{
+    font-size:24px;
+    line-height:1.15;
+  }
+
+  .section-head p{
+    font-size:14px;
+    line-height:1.55;
+  }
+
   .cards.services{
     grid-template-columns: 1fr;
+    gap:12px;
+  }
+
+  .service-card{
+    padding:16px;
+  }
+
+  .service-top{
+    gap:10px;
+  }
+
+  .service-top h3{
+    font-size:15px;
+  }
+
+  .service-price{
+    font-size:13px;
+    padding:5px 9px;
   }
 
   #teenused .center .btn{
     width:100%;
-    max-width:420px;
+    max-width:none;
+  }
+
+  .about{
+    gap:16px;
+  }
+
+  #about h2{
+    font-size:26px;
+    margin-bottom:8px;
+  }
+
+  #about p.muted{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  #about .check{
+    font-size:14px;
+    line-height:1.75;
+    padding-left:16px;
   }
 
   .about .row{
     flex-direction:column;
     align-items:stretch;
   }
-  .about .row .btn{width:100%}
+
+  .about .row .btn{
+    width:100%;
+  }
+
+  .story-media{
+    max-width:100%;
+    width:100%;
+    max-height:340px;
+  }
+
+  .prices-wrap{
+    gap:12px;
+  }
+
+  .price-row{
+    padding:12px 14px;
+    font-size:14px;
+  }
+
+  .rules{
+    padding:14px;
+  }
 
   .rules .row{
     flex-direction:column;
     align-items:stretch;
   }
-  .rules .row .btn{width:100%}
 
-  .gallery{gap:12px}
+  .rules .row .btn{
+    width:100%;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
   .g{
-    height: clamp(240px, 52vw, 360px);
+    height: clamp(220px, 62vw, 320px);
     background-position:center;
   }
 
   .cta-inner{
+    padding:22px 0;
     flex-direction:column;
     align-items:flex-start;
   }
+
+  .cta-inner h2{
+    font-size:22px;
+  }
+
+  .cta-inner p{
+    font-size:14px;
+    line-height:1.55;
+  }
+
   .cta-inner .row{
     width:100%;
     flex-direction:column;
     align-items:stretch;
   }
-  .cta-inner .row .btn{width:100%}
+
+  .cta-inner .row .btn{
+    width:100%;
+  }
+
+  .contact-card{
+    padding:14px;
+  }
 
   .crow{
     flex-direction:column;
     align-items:flex-start;
     gap:4px;
+    padding:9px 0;
   }
+
+  .crow span,
+  .crow b{
+    font-size:14px;
+  }
+
   .crow b{
     word-break:break-word;
   }
-  .map iframe{min-height:260px}
+
+  .contact-actions{
+    margin-top:10px;
+  }
+
+  .contact-actions .row{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .contact-actions .btn{
+    width:100%;
+  }
+
+  .map iframe{
+    min-height:240px;
+  }
+
+  .footer{
+    padding:16px 0 24px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    gap:8px;
+  }
 }
 
 @media (max-width: 520px){
-  .cards{grid-template-columns:1fr}
-  .hero h1{font-size:38px}
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:28px;
+    line-height:1.1;
+  }
+
+  .hero-left{
+    padding:16px 14px 14px;
+  }
+
+  .lead{
+    font-size:13.5px;
+  }
+
+  .section-head h2{
+    font-size:22px;
+  }
+
+  .service-top{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .service-price{
+    align-self:flex-start;
+  }
 }
 
 /* extra: kõige väiksemad telefonid */
 @media (max-width: 420px){
-  .hero h1{font-size:32px}
-  .kicker{font-size:11px}
+  .container{
+    padding:0 12px;
+  }
+
+  .hero h1{
+    font-size:26px;
+  }
+
+  .kicker{
+    font-size:10px;
+  }
+
+  .btn{
+    padding:10px 12px;
+    font-size:14px;
+  }
+
+  .section{
+    padding:30px 0;
+  }
+
+  .map iframe{
+    min-height:220px;
+  }
 }
