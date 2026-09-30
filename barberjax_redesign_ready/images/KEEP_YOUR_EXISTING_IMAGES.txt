@@ -1,0 +1,1 @@
+Jäta oma vana GitHub repo images/ kaust alles. Uus index.html kasutab samu g1.jpg–g6.jpg, story.jpg/story.webp ja hero-bg.png faile.
